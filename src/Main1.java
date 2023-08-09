@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main1 {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите число между пробелами:");
+        System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РјРµР¶РґСѓ РїСЂРѕР±РµР»Р°РјРё:");
         String input = sc.nextLine();
         System.out.println(calc(input));
     }
@@ -13,9 +13,9 @@ public class Main1 {
         String result;
         String[] operands = input.split(" ");
         if (operands.length >= 4) {
-            throw new Exception("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+            throw new Exception("Р¤РѕСЂРјР°С‚ РјР°С‚РµРјР°С‚РёС‡РµСЃРєРѕР№ РѕРїРµСЂР°С†РёРё РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂСЏРµС‚ Р·Р°РґР°РЅРёСЋ - РґРІР° РѕРїРµСЂР°РЅРґР° Рё РѕРґРёРЅ РѕРїРµСЂР°С‚РѕСЂ (+, -, /, *)");
         } else if (operands.length <= 2) {
-            throw new Exception("Строка не является математической операцией");
+            throw new Exception("РЎС‚СЂРѕРєР° РЅРµ СЏРІР»СЏРµС‚СЃСЏ РјР°С‚РµРјР°С‚РёС‡РµСЃРєРѕР№ РѕРїРµСЂР°С†РёРµР№");
         } else {
             int number1 = Integer.parseInt(operands[0]);
             int number2 = Integer.parseInt(operands[2]);
@@ -41,10 +41,10 @@ public class Main1 {
                         result = String.valueOf(number);
                         return result;
                     }
-                    default -> throw new Exception("Калькулятор принимает только (+, -, /, *)");
+                    default -> throw new Exception("РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ РїСЂРёРЅРёРјР°РµС‚ С‚РѕР»СЊРєРѕ (+, -, /, *)");
                 }
             } else
-                throw new Exception("калькулятор принимает от 1 до 10");
+                throw new Exception("РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ РїСЂРёРЅРёРјР°РµС‚ РѕС‚ 1 РґРѕ 10");
         }
     }
 }
